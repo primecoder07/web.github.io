@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mukta Kulkarni Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+/* Global Styles */
+body { margin:0; font-family:'Poppins', sans-serif; background:#fdfdfd; color:#111; scroll-behavior:smooth; overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
+h1,h2,h3 { margin:0; }
+.container { width:90%; max-width:1200px; margin:auto; }
+section { padding:80px 0; }
+
+/* Navbar */
+nav { position:sticky; top:0; background:#fff; display:flex; justify-content:space-between; align-items:center; padding:20px 5%; box-shadow:0 2px 10px rgba(0,0,0,0.1); z-index:100; }
+nav a { margin:0 15px; font-weight:500; transition:0.3s; }
+nav a:hover { color:#3b82f6; }
+
+/* Home Section */
+#home { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; position:relative; overflow:hidden; min-height:100vh; }
+#home .intro { max-width:600px; z-index:2; }
+#home h1 { font-size:3em; margin-bottom:10px; }
+#home p { font-size:1.1em; margin-bottom:20px; }
+#home img { width:250px; border-radius:10px; transition:transform 0.5s; z-index:2; position:relative; }
+#home img:hover { transform: rotateY(20deg) rotateX(5deg); }
+.skills { display:flex; flex-wrap:wrap; gap:15px; margin-top:20px; }
+.skills span { background:#e0f2fe; color:#0369a1; padding:8px 15px; border-radius:20px; font-weight:500; transition:0.3s; cursor:default; }
+.skills span:hover { transform:scale(1.1); }
+
+/* Section Titles */
+section h2 { text-align:center; margin-bottom:40px; font-size:2.5em; color:#1e3a8a; }
+
+/* Cards for Projects/Certificates/Education */
+.card-container { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.card { background:#fff; border-radius:15px; width:300px; padding:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1); transition:transform 0.4s, box-shadow 0.4s; perspective:1000px; }
+.card:hover { transform: rotateY(10deg) translateY(-10px); box-shadow:0 20px 30px rgba(0,0,0,0.2); }
+.card img { width:100%; border-radius:10px; margin-bottom:15px; }
+.card h3 { margin-bottom:10px; color:#1e40af; }
+.card p { font-size:0.95em; line-height:1.4; }
+
+/* Footer / Contact */
+footer { background:#111; color:#fff; padding:40px 5%; text-align:center; }
+footer a { color:#3b82f6; margin:0 10px; }
+
+/* Responsive */
+@media(max-width:900px){ #home{flex-direction:column;text-align:center;} #home img{margin-top:30px;} }
+canvas { position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+<div class="logo"><strong>Mukta Kulkarni</strong></div>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#education">Education</a>
+</div>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+<div class="intro container">
+<h1>Mukta Kulkarni</h1>
+<p>B.Tech CSE student, open to learning & exploring ideas, design, and innovation.</p>
+<div class="skills">
+<span>Creative Thinking</span>
+<span>Prototype Development</span>
+<span>Basics of Python</span>
+<span>Management</span>
+<span>Teamwork</span>
+</div>
+</div>
+<img src="https://via.placeholder.com/250" alt="Profile Photo">
+
+<!-- 3D Canvas -->
+<canvas id="bgCanvas"></canvas>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="card-container container">
+<div class="card">
+<img src="https://via.placeholder.com/300x180" alt="Vehicle Project">
+<h3>Vehicle Preventive Maintenance System</h3>
+<p>Prototype system to manage vehicles, track maintenance, cost analysis, and scheduling.</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/300x180" alt="Roof Cooling Project">
+<h3>Roof Cooling Material Project</h3>
+<p>Collaborative project using green chemistry principles for eco-friendly cooling solutions.</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/300x180" alt="Smart Student Connect">
+<h3>Smart Student Connect Website</h3>
+<p>Front-end website for students with clean UI and practical usability.</p>
+</div>
+</div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates">
+<h2>Certificates</h2>
+<div class="card-container container">
+<div class="card"><img src="https://via.placeholder.com/300x180" alt="Certificate 1"></div>
+<div class="card"><img src="https://via.placeholder.com/300x180" alt="Certificate 2"></div>
+<div class="card"><img src="https://via.placeholder.com/300x180" alt="Certificate 3"></div>
+</div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+<h2>Education</h2>
+<div class="card-container container">
+<div class="card">
+<h3>B.Tech in CSE</h3>
+<p>MIT Vishwprayag University | 2025 – 2029</p>
+</div>
+<div class="card">
+<h3>12th Grade</h3>
+<p>[Your School Name] | Year of Completion</p>
+</div>
+</div>
+</section>
+
+<!-- Footer / Contact -->
+<footer>
+<p>Contact Me:</p>
+<p>
+<a href="mailto:your@email.com">Email</a> | 
+<a href="https://github.com/primecoder07" target="_blank">GitHub</a> | 
+<a href="https://www.linkedin.com/in/mukta-kulkarni-26a480342/" target="_blank">LinkedIn</a>
+</p>
+<p>&copy; 2026 Mukta Kulkarni</p>
+</footer>
+
+<!-- 3D Background JS -->
+<script>
+const canvas = document.getElementById('bgCanvas');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight,0.1,1000);
+const renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.z = 5;
+
+// Particle system
+const particlesCount = 150;
+const particlesGeometry = new THREE.BufferGeometry();
+const particlesMaterial = new THREE.PointsMaterial({ color:0x3b82f6, size:0.05 });
+const positions = new Float32Array(particlesCount*3);
+for(let i=0;i<particlesCount*3;i++){ positions[i] = (Math.random()-0.5)*20; }
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions,3));
+const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+scene.add(particles);
+
+// Floating spheres
+const spheres = [];
+for(let i=0;i<5;i++){
+    const geo = new THREE.SphereGeometry(Math.random()*0.3+0.2,32,32);
+    const mat = new THREE.MeshStandardMaterial({color:0x3b82f6, wireframe:true});
+    const mesh = new THREE.Mesh(geo,mat);
+    mesh.position.set((Math.random()-0.5)*6,(Math.random()-0.5)*4,(Math.random()-0.5)*4);
+    spheres.push(mesh);
+    scene.add(mesh);
+}
+
+// Lights
+const light = new THREE.PointLight(0xffffff,1);
+light.position.set(5,5,5);
+scene.add(light);
+const ambient = new THREE.AmbientLight(0xffffff,0.5);
+scene.add(ambient);
+
+// Animation
+function animate(){
+    requestAnimationFrame(animate);
+    spheres.forEach(s => {
+        s.rotation.x += 0.005;
+        s.rotation.y += 0.007;
+    });
+    particles.rotation.y += 0.001;
+    renderer.render(scene,camera);
+}
+animate();
+
+// Resize
+window.addEventListener('resize', ()=>{
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+
+</body>
+</html>
